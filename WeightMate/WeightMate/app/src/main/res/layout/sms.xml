@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Weight Tracker - SMS Notifications"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Permission message -->
+    <TextView
+        android:id="@+id/permissionPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This app requires SMS permission to send you notifications for reaching your weight goal. Do you want to allow SMS notifications?"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Buttons for accepting or declining  -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <!-- Request button -->
+        <Button
+            android:id="@+id/requestPermissionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allow SMS Notifications"
+            android:onClick="requestSMSPermission" />
+
+        <!-- Decline button -->
+        <Button
+            android:id="@+id/declinePermissionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decline"
+            android:onClick="declineSMSPermission"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Denied button -->
+    <TextView
+        android:id="@+id/deniedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have declined SMS notifications. The app will continue to work, but no notifications will be sent."
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:paddingTop="16dp"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <!-- Success message  -->
+    <TextView
+        android:id="@+id/grantedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank you! You will receive SMS notifications when you reach your goal weight."
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:paddingTop="16dp"
+        android:textColor="@android:color/holo_green_dark" />
+</LinearLayout>
