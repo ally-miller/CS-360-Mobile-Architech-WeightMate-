@@ -1,1 +1,5 @@
-# CS-360-Mobile-Architech
+My primary goal of WeightMate was to create a user friendly application that allows users to log in,track their weight gain or loss, and receive progress updates via SMS notifications. The app includes screens for user login, database integration, and SMS notification management, all designed with a focus on simplicity and ease of use. I aimed for an intuitive interface so that users could easily navigate the app without unnecessary complexity.
+
+In development, I implemented functionalities for login, database handling, and SMS notifications. I encapsulated the database logic within a Database class, using constants for permission settings. This modular approach will allow for future updates and expanded functionality. I then tested the app to ensure reliable user authentication, SMS notification delivery, and UI responsiveness.
+
+One challenge I encountered was implementing SMS functionality, which required permission handling. This was complex for me, so I used Android's permission management system and tested to confirm its reliability ind depth. I believe my strongest demonstration of of my skills in this project was in the database integration by using Android's security and database features.
